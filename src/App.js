@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import btnModule from "./Button.module.css"
 
 function App() {
+
+  let [status, setStatus] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Module style in css</h1>
+      <button className={btnModule.error}>Error</button>
+      <button className={btnModule.warning}>Demo</button>
+      <h1>Use of Ternary Operators</h1>
+      <button onClick={() => setStatus(!status)}>
+        {(status) ? 'Hide' : 'Show'}
+      </button>
+      {(status) ? <h1 className='para'>Welcome to SW</h1> : ''}
     </div>
   );
 }
