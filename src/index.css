@@ -1,21 +1,82 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.para{
+.para {
   background-color: red;
   padding: 10px;
   margin: auto;
   width: 1000px;
   text-align: center;
+}
+
+.menu {
+  width: 90%;
+  text-align: center;
+  left: -100%;
+  position: fixed;
+  height: 100vh;
+  transition: 0.5s;
+  background-color: yellow;
+  list-style: none;
+}
+.activeMenu {
+  left: 0;
+}
+
+.menu ul li {
+  list-style: none;
+  padding: 10px 0px;
+  display: inline;
+  margin: 40px;
+  font-size: 20px;
+}
+
+.micon {
+  position: absolute;
+  right: 10px;
+}
+
+.ModelOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ModelDiv {
+  width: 320px;
+  height: 320px;
+  position: fixed;
+  left: 50%;
+  top: -500px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.en {
+  position: fixed;
+  right: -30px;
+  top: 100px;
+  transform: rotate(90deg);
+}
+
+.modelShow{
+  display: block;
+}
+
+.showModelDiv{
+  top: 50%;
 }
